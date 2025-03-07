@@ -19,21 +19,21 @@ export default function Home() {
 
   return (
     <>
-      <WarningTape />
+      <WarningTape order={0} />
       <div className="h-full relative max-w-[800px] mx-auto">
         <main className={`mb-auto flex flex-col ${poppins.className}`}>
           <h1
-            className={`font-bold text-3xl mx-auto my-4 ${fredoka.className}`}
+            className={`font-bold text-4xl mx-auto my-4 ${fredoka.className}`}
           >
             ⚠️ ATENÇÃO ⚠️
           </h1>
-          <p className="p-2">
+          <p className="p-2 text-2xl">
             Essa página ainda está em construção! Tome cuidado para não esbarrar
             em nada e aguarde até que ela se torne algo incrível! <br />
             Enquanto isso, que tal jogar um joguinho para passar o tempo?
             Divirta-se!
           </p>
-          <div className="grid grid-cols-3 gap-8 w-[75%] mx-auto mt-5">
+          <div className="grid sm:grid-cols-3 gap-8 w-[80%] mx-auto mt-5">
             <GameCard
               imgSrc={"https://github.com/murilofmatos.png"}
               onClick={openModal}
@@ -55,7 +55,7 @@ export default function Home() {
         style={{ transform: `scale(${modalScale})` }}
         onClick={closeModal}
       ></div>
-      <WarningTape />
+      <WarningTape order={1} />
     </>
   );
 }

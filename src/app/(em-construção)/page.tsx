@@ -34,10 +34,7 @@ export default function Home() {
             Divirta-se!
           </p>
           <div className="grid sm:grid-cols-3 gap-8 w-[80%] mx-auto mt-5">
-            <GameCard
-              imgSrc={"https://github.com/murilofmatos.png"}
-              onClick={openModal}
-            />
+            <GameCard imgSrc={"snake-game.png"} onClick={openModal} />
             <GameCard
               imgSrc={"https://github.com/murilofmatos.png"}
               onClick={openModal}

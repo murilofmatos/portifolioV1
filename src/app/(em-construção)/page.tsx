@@ -47,7 +47,7 @@ export default function Home() {
               onClick={openModal}
             />
           </div>
-          <GameModal modalScale={modalScale} />
+          <GameModal scale={modalScale} />
         </main>
       </div>
       <div

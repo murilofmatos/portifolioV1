@@ -3,7 +3,7 @@ import WarningTape from "./components/WarningTape";
 import GameCard from "./components/GameCard";
 import { Poppins, Fredoka } from "next/font/google";
 import GameModal from "./components/GameModal";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["500", "700"] });
 const fredoka = Fredoka({ subsets: ["latin"], weight: "500" });
@@ -11,7 +11,7 @@ const fredoka = Fredoka({ subsets: ["latin"], weight: "500" });
 export default function Home() {
   const [modalScale, setModalScale] = useState(0);
   function openModal() {
-    setModalScale(100);
+    setModalScale(1);
   }
   function closeModal() {
     setModalScale(0);
@@ -51,7 +51,8 @@ export default function Home() {
         </main>
       </div>
       <div
-        className={`w-full h-full absolute scale-${modalScale}`}
+        className={`w-full h-full absolute`}
+        style={{ transform: `scale(${modalScale})` }}
         onClick={closeModal}
       ></div>
       <WarningTape />
